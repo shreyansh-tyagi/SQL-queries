@@ -1,0 +1,15 @@
+select * from branch where e_salary between 50000 and 70000;
+select count(*) from branch where e_salary>50000;
+select * from branch order by e_salary; 
+select * from branch order by e_age asc;
+select * from branch order by e_salary desc;
+select avg(e_salary) from branch order by e_age desc;
+select e_name from branch order by e_salary;
+select avg(e_salary), e_gender from branch group by e_gender;
+select avg(e_salary) from branch group by e_gender; 
+select avg(e_salary),e_dept from branch group by e_dept order by avg(e_age) desc;
+select avg(e_salary),e_gender from branch group by e_gender;
+select avg(e_age) ,e_dept from branch group by e_dept order by avg(e_age) desc;
+select e_dept from branch where e_salary between 70000 and 90000 group by e_dept; 
+select e_gender from branch where e_age between 50 and 70 group by e_gender;
+select avg(e_salary) , e_dept from branch where e_salary between 60000 and 90000 group by e_dept order by avg(e_age);
