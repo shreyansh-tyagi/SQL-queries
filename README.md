@@ -1,1 +1,2 @@
-go through 'ALL SQL QUERIES FROM FIRST TO END' file to know about working of all sql queries.  
+click on 'SQL QUERIES FROM STARTING TO END' to know queries from very basic to advance
+and also creating procedure and function in sql language  
