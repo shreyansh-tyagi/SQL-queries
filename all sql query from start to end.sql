@@ -137,7 +137,20 @@ select * from e_data full join et_data;
 select * from e_data
 full join et_data;
 
+/*operator*/
+-- union operator
+select * from e_data 
+union
+select * from et_data;
 
+-- union all operator
+select * from e_data
+union all 
+select * from et_data;
+
+select * from e_data 
+Except
+select * from et_data;
 
 
 
