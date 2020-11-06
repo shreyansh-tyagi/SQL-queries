@@ -152,17 +152,15 @@ select * from et_data;
 Except
 select * from et_data; */
 
-
-
-
-
-
-
-
-
-
-
-
+-- creating view 
+create view female_employee as select * from e_data where e_gender='female';
+select * from female_employee;
+-- now some operation on view table
+select e_name,e_salary from female_employee where e_salary between 30000 and 50000;
+select avg(e_salary) ,e_dept from female_employee group by e_dept order by avg(e_salary) desc;
+select max(e_age) from female_employee;
+select sum(e_salary) from female_employee;
+select * from female_employee where e_salary>40000 and e_age>30;
 
 
 
