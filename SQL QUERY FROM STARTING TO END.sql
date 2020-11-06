@@ -148,9 +148,9 @@ select * from e_data
 union all 
 select * from et_data;
 
-select * from e_data 
+/* select * from e_data 
 Except
-select * from et_data;
+select * from et_data; */
 
 
 
