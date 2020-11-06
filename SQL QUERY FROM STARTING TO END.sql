@@ -162,6 +162,37 @@ select max(e_age) from female_employee;
 select sum(e_salary) from female_employee;
 select * from female_employee where e_salary>40000 and e_age>30;
 
+-- to delete view the command is
+drop view female_employee;
+
+-- to add some columns into table
+-- alter command is used 
+-- alter table table_name add coloumn_name datatype;(this is used to add coloumn)
+-- alter table table_name drop coloumn_name;(this is used to delete coloumn)
+
+alter table e_data add grade varchar(30); 
+select * from e_data; 
+alter table e_data drop grade;
+
+-- merging
+/*merge employee.et_data as t 
+using organisation.branch as s
+on t.e_dept=s.e_dept
+when matched then update set t.e_salary=s.e_salary,t.e_age=s.e_age;*/
+ insert ignore into e_data select * from et_data;
+select * from et_data;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
