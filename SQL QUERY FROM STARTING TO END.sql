@@ -568,6 +568,402 @@ begin catch
 print '6'
 end catch;
 
+create procedure hello 
+@hey as varchar(30) as
+select * from e_data where e_gender=@hey
+go
+
+exec hello @hey='male'
+exec hello @hey='female'
+
+
+declare @a as int 
+declare @b as int 
+declare @c as int 
+begin try
+set @a=10
+set @b=2
+set @c=@a+@b
+declare @d as float  
+set @d =@a/@b
+declare @e as int 
+set @e =@a*@b
+/* declare @f as int 
+set @f=@a/0 */
+end try 
+
+begin catch 
+print error_message()
+end catch
+
+begin try 
+select e_name+e_age as add1 from e_data
+end try
+begin catch 
+print 'cannot add integer data with string data .....OOPS! sorry'
+end catch
+go
+-- declare a variable 
+-- @ is used to alongwith declare keyword 
+
+declare @a as varchar(30)
+set @a ='shreyansh'
+print @a
+
+--transactions in sql 
+begin transaction 
+update e_data set e_age =10 where e_name ='shreyansh'
+
+select * from e_data
+rollback transaction   --this command is used to rollback the transaction in the same condition as it was earlier
+
+begin transaction
+update e_data set e_age+=10 where e_id =1
+--now to make the change permanent in the trasaction use commit as keyword 
+commit transaction
+
+select * from et_data
+
+begin transaction 
+update et_data set e_age+=10
+where e_id =2
+update et_data set e_salary+=10000
+where e_name ='anuj'
+
+select * from et_data;
+rollback transaction
+commit transaction
+
+select * from e_data;
+begin try
+begin transaction 
+update e_data 
+set e_age+=20 where e_id=1
+update e_data set e_salary+=1000/0 where e_gender='female'
+commit transaction 
+print 'transaction committed '
+end try 
+begin catch 
+rollback transaction 
+print 'transaction rollbacked'
+end catch 
+
+begin try 
+begin transaction 
+update et_data set e_salary+=1000 where e_id=1
+update et_data set e_age+=100/0 where e_id =1 
+commit transaction
+print 'transaction has been commited '
+end try 
+begin catch
+rollback transaction 
+print 'transaction rollbacked'
+end catch
+
+use employee;
+select * from et_data;
+begin try 
+begin transaction 
+update et_data set e_age+=10 where e_name='anuj'
+update et_data set e_salary+=1000 where e_id =1
+commit transaction
+print 'transaction commited '
+end try 
+begin catch
+rollback transaction
+print 'transaction rollbacked '
+end catch
+
+
+-- to use check function 
+create table sample_1(Dates date,id int not null,Name varchar(30),age int,check(age>18),primary key(id) );
+insert into sample_1 values('5-12-2020',1,'shrey',15);
+insert into sample_1 values('5-12-2020',1,'shrey',19);
+insert into sample_1 values('2020-05-12',2,'somu',25);
+
+select Name from sample_1 where Dates='2020-05-12';
+select * from sample_1;
+
+--trigger in sql
+-- suntax:-
+/* create trigger [trigger_name]
+before | after
+insert | update | delete 
+on table_name
+for each row 
+trigger boy */
+
+create trigger employee_salary
+after update 
+on e_data 
+ for each row set e_data.e_salary+=1000;
+
+ --index
+ --syntax:- create index index_name on table_name(col1,col2);
+
+ create index employee_name on et_data(e_name);
+ select * from employee_name;
+
+ select * from et_data;
+
+ -- aliases
+ select e_name as name ,e_salary as salary from e_data ;
+select e_name as name, e_salary as salary,e_age as employee_age from et_data;
+
+--exists query
+select e_name from e_data where exists(select e_name from et_data where et_data.e_id= e_data.e_id and et_data.e_age>e_data.e_age);
+select e_name from e_data where exists(select e_name from et_data where et_data.e_id=e_data.e_id);
+select e_name,e_salary from e_data where exists(select * from et_data where et_data.e_id=e_data.e_id);
+select * from e_data;
+select * from et_data;
+
+--any and all operator
+select e_name ,e_salary from e_data where e_id = any(select e_id from et_data where e_salary =80910);
+
+select e_name,e_salary from e_data where e_id =any(select e_id from et_data);
+
+select e_name as name ,e_salary as employee_salary from e_data where e_id =any(select e_id from et_data);
+select e_name as name ,e_salary as employee_salary from e_data where e_id =all(select e_id from et_data where e_name='shrey');
+select e_name as name,e_salary as salary from e_data where e_id =all(select e_id from et_data where e_salary>50000 );
+
+--limit statement in select 
+select * from e_data where e_salary>50000 order by e_salary desc limit 4 [offset 2];
+select top(3) *  from e_data;
+
+select top(3) * from e_data where e_salary>30000 order by e_salary desc;
+
+--sql minus operator
+select * from e_data
+except
+select * from et_data;
+
+--null and not null operator 
+select * from e_data where e_name is not null;
+select * from e_data where e_name is null;
+select e_name,e_salary from et_data where e_age is not null;
+select e_name as name ,e_salary as salary from et_data where e_name is null;
+
+--comments in sql
+-- single line comment --
+/* multi line comments
+hello how you doing */
+
+--if statement 
+declare @num as int
+set @num=20
+if @num <=20 and @num>20
+print 'we are in if '
+else print 'we are in else'
+go
+
+--nested if statement 
+declare @num as int 
+set @num=30
+if @num>10 
+print 'we are in if'
+ begin
+if @num <=50
+print 'we are in nested if '
+else print 'we are in  nested else '
+end; 
+go
+declare @a as int
+declare @b as int 
+set @b=50
+set @a =100
+if @a>10 and @b<100
+print 'we are in if '
+begin if @a=@b
+print 'we are in nested if'
+else 
+print 'we are in else '
+end ;
+
+--while statement 
+declare @c as int
+set @c=15
+while @c<20 begin
+print 'we are in while'
+print'*'
+set @c+=1
+end print'we are out of while'
+go
+
+--break and contine statement in sql
+
+declare @x as int 
+set @x=0
+while @x<=10
+begin if @x=2
+print'we are in if '
+--break;
+else set @x+=1
+print'we are in else'
+--continue
+end;
+print'done'
+go
+use employee;
+
+--sequences statment  in sql
+create sequence yxz
+as bigint
+start with 1 
+increment by 1
+--min value 1 
+--max value 99
+no cycle 
+cache 10
+
+
+
+--these are all commands used in sql queries 
+-- thank you all
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
