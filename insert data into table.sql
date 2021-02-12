@@ -12,3 +12,4 @@ select e_age from employee;
 insert into employee values(2,'ravi','m',22,3000,'react module');
 insert into employee values(3,'rashika','f',23,4000,'data analyst');
 insert into employee values(4,'sneha','f',21,5000,'engineer');
+insert into employee values(2,'sneha','f',21,5000,'engineer');insert into employee values(2,'ravi','m',22,3000,'react module'); insert into employee values(3,'rashika','f',23,4000,'data analyst');
