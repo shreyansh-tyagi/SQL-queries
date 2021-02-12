@@ -5,7 +5,8 @@ e_age int, e_salary int, e_dept varchar(50),
 primary key(e_id)
 );
 
-insert into employee values(1,'shreyansh','m',21,2000,'data scientist');select * from employee;
+insert into employee values(1,'shreyansh','m',21,2000,'data scientist');
+select * from employee;
 select e_age from employee;
 
 
