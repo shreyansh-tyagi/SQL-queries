@@ -9,3 +9,5 @@ on branch.e_dept=department.d_name;
 select * from branch full join department;
 select * from branch union select * from department; /* number of column should be equal in both 
 table to perform union, intersection,except etc */
+
+/* now trying to add the some data inside this file through python file handling concept */
