@@ -11,4 +11,4 @@ select * from branch union select * from department; /* number of column should 
 table to perform union, intersection,except etc */
 
 /* now trying to add the some data inside this file through python file handling concept */
-select * from organisation;
+select * from organisation;/* nothing more to add ,just a try */
