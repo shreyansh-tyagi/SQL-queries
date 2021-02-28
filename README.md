@@ -136,7 +136,7 @@
 3. *Grant*
 4. *Revoke*
 
-# *SQL COMMANDS*
+# *SQL COMMANDS :-*
 
 
 
