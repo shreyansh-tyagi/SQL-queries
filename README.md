@@ -137,7 +137,7 @@
 4. *Revoke*
 
 # **_SQL COMMANDS :-_**
-## *DDL*|*DQL*|*DML*|*DCL*
+ *DDL*|*DQL*|*DML*|*DCL*
 --------|-----|-----|------
 
 
