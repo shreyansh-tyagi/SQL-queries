@@ -1,2 +1,6 @@
-# Structured Query Languange(SQL)
+# **_Structured Query Languange(SQL)_**
+
+## *This repository contain all the topic relted queries of SQL language*
+
+
 
