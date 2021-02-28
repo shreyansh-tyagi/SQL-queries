@@ -1,6 +1,6 @@
 # **_Structured Query Language(SQL)_**
 
-## *This repository contain all the topic related queries of SQL language.*
+## *This repository contain all the required queries of :point_right:[SQL language].*
 
 ## *Topics :-*
 ### *SQL Query Types :-*
@@ -148,6 +148,6 @@
 *Comments*||*Explain paln*
 |||*Lock table*
 
-## For problem solving on SQL language check my [HackerRank](https://www.hackerrank.com/shreyansh_tyagi) account.
+## For problem solving on SQL language check my :point_right:[HackerRank](https://www.hackerrank.com/shreyansh_tyagi) account.
 
 
