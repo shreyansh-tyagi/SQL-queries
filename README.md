@@ -21,15 +21,69 @@
 ### *SQL Comparision operators :-*
 1. *comparision operators(<=, >=, ==)*
 
-### *SQL JOins :-* 
+### *SQL Joins :-* 
 1. *Right join*
 2. *Left join*
 3. *Inner join*
 4. *Outer join*
 5. *Full join*
 
-## *SQL Aliases :-*
+### *SQL Aliases :-*
 1. *Aliases*
+
+### *SQL Clauses :-*
+1. *Distinct clause*
+2. *From clause*
+3. *Where clause*
+4. *Order by clause*
+5. *Group by clause*
+6. *Having clause*
+7. *Top clause*
+
+### *SQL Functions :-*
+1. *Count function*
+2. *Sum function*
+3. *Min function*
+4. *Max function*
+5. *Avg function*
+6. *Ltrim function*
+7. *Lower function*
+8. *Upper function*
+9. *Reverse function*
+10. *Substring function*
+11. *IIF function*
+12. *Scalar value function*
+13. *Table value function*
+14. *Left function*
+15. *Right function*
+
+### *SQL Conditions :-*
+1. *AND*
+2. *OR*
+3. *NOT*
+4. *AND & OR*
+5. *LIKE :-*
+   * *Wild character( percent '%' , underscore '_')*
+6. *IN*
+7. **   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
