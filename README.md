@@ -146,7 +146,7 @@
 *Rename command*||*Merge*
 *Truncate command*||*Call*
 *Comments*||*Explain paln*
-||*Lock table*
+ ||*Lock table*
 
 
 
