@@ -117,17 +117,26 @@
 5. *Declare variable*
 6. *Loops and conditional statements*
 7. *Sequences(Autonumber)*
-8.
-9.
+8. *Triggers*
+9. *Cursors*
+10. *Auto increment(Sequences)*
+11. *Merge*
 
+### *SQL Database Administration :-*
+1. *Attach database*
+2. *Detach database*
+3. *Vaccum*
+4. *Auto_vaccum*
 
+### *SQL Merge topics :-*
+1. *Exceptional habdling :-*
+   * *Try*
+   * *Catch*
+2. *Transaction, Rollback Transaction, Commit transaction*
+3. *Grant*
+4. *Revoke*
 
-
-
-
-
-
-
+# *SQL COMMANDS*
 
 
 
