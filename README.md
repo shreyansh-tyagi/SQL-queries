@@ -63,7 +63,7 @@
 3. *NOT operator*
 4. *AND & OR operator* 
 5. *LIKE operator :-*
-  * *Wild character( percent '%' , underscore '_')*
+   * *Wild character( percent '%' , underscore '_')*
 6. *IN operator* 
 7. *IS NULL operator*
 8. *IS NOT NULL operator*
