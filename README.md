@@ -148,5 +148,6 @@
 *Comments*||*Explain paln*
 |||*Lock table*
 
+## For problem solving on SQL language check my [HackerRank](https://www.hackerrank.com/shreyansh_tyagi)
 
 
