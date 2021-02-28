@@ -1,6 +1,6 @@
 # **_Structured Query Language(SQL)_**
 
-## *This repository contain all the required queries of :point_right:[SQL language].*
+## *This repository contain all the required queries of :point_right:[SQL language](https://github.com/shreyansh-tyagi/SQL-queries/blob/master/SQL%20QUERY%20FROM%20STARTING%20TO%20END.sql).*
 
 ## *Topics :-*
 ### *SQL Query Types :-*
