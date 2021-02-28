@@ -77,9 +77,48 @@
 16. *ANY operator*
 17. *ALL operator*
 
+### *SQL Tables and Views :-*
+1. *Create table*
+2. *Create table as*
+3. *Alter table*
+4. *Global temp table*
+5. *Local temp table*
+6. *SQL Views*
+7. *Temporary table*
 
+### *SQL Keys, Constraints and Indexes :-*
+1. *Primary keys*
+2. *Indexes*
+3. *Foreign keys*
+4. *Unique & Check constraints*
+5. *Default key*
+6. *Not null*
 
+### *SQL Datatypes :-*
+1. *Int datatype*
+2. *Small datatype*
+3. *Float datatype*
+4. *Char datatype*
+5. *Varchar datatype*
+6. *Date datatype*
+7. *Time datatype*
+8. *Year datatype*
+9. *Month datatype*
+10. *Interval datatype*
+11. *Date-time interval*
 
+### *SQL Programming :-*
+1. *Comments* 
+2. *Functions*
+3. *Procedures :-*
+   * *Stored Procedure with parameter* 
+   * *Stored Procedure wthout parameter*
+4. *Literals(Contants)*
+5. *Declare variable*
+6. *Loops and conditional statements*
+7. *Sequences(Autonumber)*
+8.
+9.
 
 
 
