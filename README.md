@@ -136,7 +136,9 @@
 3. *Grant*
 4. *Revoke*
 
-# *SQL COMMANDS :-*
+# **_SQL COMMANDS :-_**
+## *DDL*|*DQL*|*DML*|*DCL*
+--------|-----|-----|------
 
 
 
