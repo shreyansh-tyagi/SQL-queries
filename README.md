@@ -138,7 +138,8 @@
 
 # **_SQL COMMANDS :-_**
  *DDL*|*DQL*|*DML*|*DCL*
-------------------------------------------|-----|-----|------
+------|-----|-----|-----
+*(data definition language)*|*(data query language)*|*(data manipulation language)*|*(data control language)*
 
 
 
