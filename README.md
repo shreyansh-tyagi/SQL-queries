@@ -57,19 +57,25 @@
 14. *Left function*
 15. *Right function*
 
-### *SQL Conditions :-*
-1. *AND*
-2. *OR*
-3. *NOT*
-4. *AND & OR*
-5. *LIKE :-*
-   * *Wild character( percent '%' , underscore '_')*
-6. *IN*
-7. **   
-
-
-
-
+### *SQL Operators And Conditions :-*
+1. *AND operator*
+2. *OR operator*
+3. *NOT operator*
+4. *AND & OR operator* 
+5. *LIKE operator :-*
+  * *Wild character( percent '%' , underscore '_')*
+6. *IN operator* 
+7. *IS NULL operator*
+8. *IS NOT NULL operator*
+9. *Union operator*
+10. *Union all operator*
+11. *Intersect operator*
+12. *Minus operator*
+13. *Except operator*  
+14. *BETWEEN Condition*
+15. *EXISTS Condition*
+16. *ANY operator*
+17. *ALL operator*
 
 
 
