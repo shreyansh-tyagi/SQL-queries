@@ -140,13 +140,13 @@
  *DDL*|*DQL*|*DML*|*DCL*
 ------|-----|-----|-----
 *(Data definition language)*|*(Data query language)*|*(Data manipulation language)*|*(Data control language)*
-*Create command*|* *select*|* *Insert*
-*Alter command*||* *Update*
-*Drop command*||* *Delete*
-*Rename command*||* *Merge*
-*Truncate command*||* *Call*
-*Comments*||* *Explain paln*
-||* *Lock table*
+*Create command*|* *select*|*Insert*
+*Alter command*||*Update*
+*Drop command*||*Delete*
+*Rename command*||*Merge*
+*Truncate command*||*Call*
+*Comments*||*Explain paln*
+||*Lock table*
 
 
 
