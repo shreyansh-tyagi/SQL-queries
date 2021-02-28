@@ -139,8 +139,14 @@
 # **_SQL COMMANDS :-_**
  *DDL*|*DQL*|*DML*|*DCL*
 ------|-----|-----|-----
-*(data definition language)*|*(data query language)*|*(data manipulation language)*|*(data control language)*
-
+*(Data definition language)*|*(Data query language)*|*(Data manipulation language)*|*(Data control language)*
+* *Create command*|* *select*|* *Insert*
+* *Alter command*||* *Update*
+* *Drop command*||* *Delete*
+* *Rename command*||* *Merge*
+* *Truncate command*||* *Call*
+* *Comments*||* *Explain paln*
+||* *Lock table*
 
 
 
