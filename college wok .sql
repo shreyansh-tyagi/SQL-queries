@@ -32,6 +32,7 @@ select * from employee where day(doj)>=15;
 select * from employee where day(doj)>=15 and year(doj)>=2015;
 select *from employee order by(DOJ) desc;
 select Ename,datediff('2021-06-01',DOJ) as 'DAY_OF_EXPERIENCE' from employee;
+select Ename,datediff('2021-06-01',DOJ) as 'year_OF_EXPERIENCE' from employee;
 select*from employee where mod(salary,2)!=0;
 select*from employee where emp_ID = 'E01' and extract(year from DOJ) =1991;
 select*from employee where extract(month from DOJ)!=2;
