@@ -23,8 +23,10 @@ insert into employee values('E08','shinu','1998-12-23','2016-06-19',69801);
 
 select*from employee where DOJ = '2012-03-19';
 select emp_id,Ename,date_format(DOB,'%M-%D-%Y') from employee;
-select*from employee where(extract(year from DOJ))<2018;
+select*from employee where(extract(year from DOJ))<1997;
+select * from employee where year(DOJ)<1997;
 select*from employee where(extract(month from DOJ))=1;
+select * from employee where
 select*from employee where(extract(year from DOJ))=2019;
 select *from employee order by(DOJ) desc;
 select Ename,datediff('2021-06-01',DOJ) as 'DAY_OF_EXPERIENCE' from employee;
