@@ -35,7 +35,8 @@ select Ename,datediff('2021-06-01',DOJ) as 'DAY_OF_EXPERIENCE' from employee;
 select*from employee where mod(salary,2)!=0;
 select*from employee where (salary%2)!=0;
 
-select*from employee where emp_ID = 'E01' and extract(year from DOJ) =1991;
-select
+select*from employee where emp_ID = 'E06' and extract(year from DOJ) =1998;
+select * from employee where emp_ID='E06' and year(doj)=1998;
 select*from employee where extract(month from DOJ)!=2;
+select
 select concat('HAPPY BIRTHDAY TO ',Ename) from employee where extract(DAY from DOB)= 1 and extract(month from DOB) = 2; 
