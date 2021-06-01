@@ -38,5 +38,6 @@ select*from employee where (salary%2)!=0;
 select*from employee where emp_ID = 'E06' and extract(year from DOJ) =1998;
 select * from employee where emp_ID='E06' and year(doj)=1998;
 select*from employee where extract(month from DOJ)!=2;
-select
+select * from employee where month(doj)!=6;
 select concat('HAPPY BIRTHDAY TO ',Ename) from employee where extract(DAY from DOB)= 1 and extract(month from DOB) = 2; 
+select concat(concat('happy birthday ',Ename),' bhai koo') as 'wish' from employee where day(dob)=2 and month(dob)=9;
