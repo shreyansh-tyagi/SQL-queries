@@ -92,6 +92,7 @@ SALESMAN.NAME AS SALESMAN_NAME FROM CUSTOMER JOIN
 (SALESMAN JOIN ORDERS USING (SALESMAN_ID))USING (CUSTOMER_ID) WHERE
 SALESMAN.COMMISSION>0.12;
 
+
 -- 5. Write a SQL statement to find the list of customers who appointed a salesman for their
 -- jobs who does not live in the same city where their customer lives, and gets a
 -- commission is above 12%.
@@ -106,6 +107,8 @@ CUSTOMER.CITY NOT IN (SALESMAN.CITY) AND SALESMAN.COMMISSION>0.12;
 -- 6. Write a SQL statement to find the details of a order i.e. order number, order date,
 -- amount of order, which customer gives the order and which salesman works for that
 -- customer and how much commission he gets for an order.
+
+
 SELECT DISTINCT ORDERS.ORD_NO,ORDERS.ORD_DATE,ORDERS.PURCH_AMT,CUSTOMER.CUST_NAME AS CUSTOMER_NAME ,
 'APPOINTED', SALESMAN.NAME AS SALESMAN_NAME,SALESMAN.COMMISSION
 FROM CUSTOMER JOIN
@@ -148,6 +151,8 @@ FROM CUSTOMER JOIN(SALESMAN JOIN ORDERS USING (SALESMAN_ID))USING
 -- order date, order amount salesman name and commission to find that either any of
 -- the existing customers have placed no order or placed one or more orders by their
 -- salesman or by own.
+
+
 SELECT DISTINCT CUSTOMER.CUST_NAME AS CUSTOMER_NAME
 ,CUSTOMER.CITY,ORDERS.ORD_NO,ORDERS.ORD_DATE,ORDERS.PURCH_AMT,
 SALESMAN.NAME AS SALESMAN_NAME,SALESMAN.COMMISSION FROM
