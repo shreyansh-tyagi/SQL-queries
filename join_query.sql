@@ -58,7 +58,73 @@ INSERT INTO ORDERS VALUES(70013,3045.6,'2012-04-25',3002,5001);
 
 select * from ORDERS;
 
-
+Write a SQL statement to prepare a list with salesman name, customer name and
+their cities for the salesmen and customer who belongs to the same city.
+SELECT SALESMAN.NAME, CUSTOMER.CUST_NAME,CITY FROM SALESMAN JOIN
+CUSTOMER USING(CITY) WHERE CUSTOMER.CITY=SALESMAN.CITY;
+2. Write a SQL statement to make a list with order no, purchase amount, customer
+name and their cities for those orders which order amount between 500 and 2000.
+SELECT ORDERS.ORD_NO, ORDERS.PURCH_AMT,
+CUSTOMER.CUST_NAME,CUSTOMER.CITY FROM CUSTOMER JOIN ORDERS
+USING(CUSTOMER_ID)WHERE ORDERS.PURCH_AMT BETWEEN 500 AND 2000;
+3. Write a SQL statement to know which salesman are working for which customer.
+SELECT DISTINCT CUSTOMER.CUST_NAME AS CUSTOMER_NAME,'HANDLE
+BY',SALESMAN.NAME AS SALESMAN_NAME FROM CUSTOMER JOIN
+(SALESMAN JOIN ORDERS USING(SALESMAN_ID)) USING (CUSTOMER_ID);
+4. Write a SQL statement to find the list of customers who appointed a salesman for
+their jobs who gets a commission from the company is more than 12%.
+SELECT DISTINCT CUSTOMER.CUST_NAME AS CUSTOMER_NAME ,'APPOINTED',
+SALESMAN.NAME AS SALESMAN_NAME FROM CUSTOMER JOIN
+(SALESMAN JOIN ORDERS USING (SALESMAN_ID))USING (CUSTOMER_ID) WHERE
+SALESMAN.COMMISSION>0.12;5. Write a SQL statement to find the list of customers who appointed a salesman for their
+jobs who does not live in the same city where their customer lives, and gets a
+commission is above 12%.
+SELECT DISTINCT CUSTOMER.CUST_NAME AS CUSTOMER_NAME ,'APPOINTED',
+SALESMAN.NAME AS SALESMAN_NAME FROM CUSTOMER JOIN
+(SALESMAN JOIN ORDERS USING (SALESMAN_ID))USING (CUSTOMER_ID) WHERE
+CUSTOMER.CITY NOT IN (SALESMAN.CITY) AND SALESMAN.COMMISSION>0.12;
+6. Write a SQL statement to find the details of a order i.e. order number, order date,
+amount of order, which customer gives the order and which salesman works for that
+customer and how much commission he gets for an order.
+SELECT
+DISTINCT
+ORDERS.ORD_NO,ORDERS.ORD_DATE,ORDERS.PURCH_AMT,CUSTOMER.CUST_NA
+ME AS CUSTOMER_NAME ,
+'APPOINTED', SALESMAN.NAME AS SALESMAN_NAME,SALESMAN.COMMISSION
+FROM CUSTOMER JOIN
+(SALESMAN JOIN ORDERS USING (SALESMAN_ID))USING (CUSTOMER_ID);
+7. Write a SQL statement to make a list in ascending order for the customer who works
+either through a salesman or by own.
+SELECT DISTINCT CUSTOMER.CUST_NAME AS CUSTOMER_NAME ,'APPOINTED',
+SALESMAN.NAME AS SALESMAN_NAME FROM CUSTOMER JOIN
+(SALESMAN JOIN ORDERS USING (SALESMAN_ID))USING (CUSTOMER_ID) ORDER
+BY CUSTOMER.CUST_NAME ASC;
+8. Write a SQL statement to make a list in ascending order for the customer who holds a
+grade less than 300 and works either through a salesman or by own.
+SELECT DISTINCT CUSTOMER.CUST_NAME AS CUSTOMER_NAME ,'APPOINTED',
+SALESMAN.NAME AS SALESMAN_NAME FROM CUSTOMER JOIN
+(SALESMAN JOIN ORDERS USING (SALESMAN_ID))USING (CUSTOMER_ID) WHERE
+CUSTOMER.GRADE<300 ORDER BY CUSTOMER.CUST_NAME ASC;
+9. Write a SQL statement to make a report with customer name, city, order number,
+order date, and order amount in ascending order according to the order date to find
+that either any of the existing customers have placed no order or placed one or more
+orders.
+SELECT DISTINCT CUSTOMER.CUST_NAME AS CUSTOMER_NAME ,CUSTOMER.CITY,
+ORDERS.ORD_NO,ORDERS.ORD_DATE,ORDERS.PURCH_AMT
+FROM CUSTOMER JOIN(SALESMAN JOIN ORDERS USING (SALESMAN_ID))USING
+(CUSTOMER_ID) ORDER BY ORDERS.ORD_DATE ASC;10. Write a SQL statement to make a report with customer name, city, order number,
+order date, order amount salesman name and commission to find that either any of
+the existing customers have placed no order or placed one or more orders by their
+salesman or by own.
+SELECT
+DISTINCT
+CUSTOMER.CUST_NAME
+AS
+CUSTOMER_NAME
+,CUSTOMER.CITY,ORDERS.ORD_NO,ORDERS.ORD_DATE,ORDERS.PURCH_AMT,
+SALESMAN.NAME AS SALESMAN_NAME,SALESMAN.COMMISSION FROM
+CUSTOMER JOIN
+(SALESMAN JOIN ORDERS USING (SALESMAN_ID))USING (CUSTOMER_ID);
 
 
 
