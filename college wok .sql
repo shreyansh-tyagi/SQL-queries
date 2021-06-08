@@ -27,7 +27,7 @@ select*from employee where(extract(year from DOJ))<1997;
 select * from employee where year(DOJ)<1997;
 select*from employee where(extract(month from DOJ))=1;
 select * from employee where month(doj)=6;
-select*from employee where(extract(year from DOJ))=2019;
+select*from employee where(extract(year from DOJ))=2019; 
 select * from employee where day(doj)>=15;
 select * from employee where day(doj)>=15 and year(doj)>=2015;
 select *from employee order by(DOJ) desc;
