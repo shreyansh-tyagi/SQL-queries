@@ -1,8 +1,7 @@
-# **_Structured Query Language(SQL)_**
 
-## *This repository contain all the required queries of :point_right:[SQL language](https://github.com/shreyansh-tyagi/SQL-queries/blob/master/SQL%20QUERY%20FROM%20STARTING%20TO%20END.sql).*
-![sql_logo](https://user-images.githubusercontent.com/71514413/109434718-9fa5c600-7a3c-11eb-8a35-9d6de635b614.jpg)
+# *[Structured Query Language(SQL)](https://github.com/shreyansh-tyagi/SQL-queries/blob/master/SQL%20QUERY%20FROM%20STARTING%20TO%20END.sql)*
 
+ <a href="https://www.mysql.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="150" height="150"/>&nbsp;&nbsp;&nbsp;&nbsp; </a>
 
 ## *Topics :-*
 ### *SQL Query Types :-*
@@ -29,6 +28,7 @@
 3. *Inner join*
 4. *Outer join*
 5. *Full join*
+6. *Join*
 
 ### *SQL Aliases :-*
 1. *Aliases*
@@ -131,7 +131,7 @@
 4. *Auto_vaccum*
 
 ### *SQL Merge topics :-*
-1. *Exceptional habdling :-*
+1. *Exceptional handling :-*
    * *Try*
    * *Catch*
 2. *Transaction, Rollback Transaction, Commit transaction*
